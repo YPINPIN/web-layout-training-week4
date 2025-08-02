@@ -1,3 +1,96 @@
-.index-title {
-  font-size: 100px;
+// index header
+.index-header {
+  overflow: hidden;
+  position: relative;
+
+  .header-content {
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    transform: translateY(-50%);
+
+    @include pad() {
+      left: 50px;
+    }
+
+    @include mobile() {
+      left: 24px;
+    }
+  }
+}
+
+// sale banner
+.sale-section {
+  overflow: hidden;
+  position: relative;
+
+  .sale-banner {
+    min-height: 250px;
+    object-fit: cover;
+
+    @include mobile() {
+      min-height: 450px;
+    }
+  }
+
+  .sale-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sale-content {
+    position: relative;
+  }
+
+  .sale-indicators {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .sale-star {
+    position: absolute;
+    top: -40px;
+    left: -90px;
+
+    @include mobile() {
+      left: -74px;
+      top: -40px;
+    }
+  }
+  .sale-sparkle {
+    position: absolute;
+    top: 160px;
+    right: -55px;
+
+    @include desktop() {
+      top: 110px;
+      right: -82px;
+    }
+    @include mobile() {
+      top: 200px;
+      right: -87px;
+    }
+  }
+}
+
+// style gallery
+.gallery-item {
+  aspect-ratio: 1 / 1;
+  img {
+    object-fit: cover;
+  }
+}
+
+@include mobile() {
+  .gallery-item {
+    min-width: 300px;
+  }
 }

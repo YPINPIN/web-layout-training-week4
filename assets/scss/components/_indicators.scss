@@ -1,0 +1,31 @@
+.indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  &-item {
+    font-size: 0;
+    &.active {
+      .indicators-dot {
+        width: 24px;
+        border-radius: 4px;
+        background-color: $neutral-600;
+      }
+    }
+  }
+
+  &-dot {
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: $neutral-400;
+
+    &:hover {
+      background-color: $neutral-600;
+    }
+  }
+}

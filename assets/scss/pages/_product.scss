@@ -1,0 +1,59 @@
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+@for $i from 1 through 2 {
+  .image-col-#{$i} {
+    width: calc(100% / 2 * #{$i});
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
+.image-item:not(:last-child, :nth-last-child(2)) {
+  margin-bottom: 8px;
+}
+
+.info-item {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $neutral-300;
+
+  p.info-item-title {
+    color: $neutral-900;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  p {
+    color: $neutral-600;
+  }
+}
+
+@include mobile() {
+  .btn-heart.btn-toggle {
+    padding: 12px;
+    .bi::before {
+      font-size: 24px;
+      margin-right: 0px;
+    }
+
+    .btn-default-text,
+    .btn-active-text {
+      display: none;
+    }
+
+    flex: 0;
+    order: 1;
+    color: $neutral-900;
+    border: none;
+
+    &:hover:not([disabled]) {
+      color: $primary-400;
+      background-color: transparent;
+    }
+  }
+}

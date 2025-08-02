@@ -1,0 +1,144 @@
+.card {
+  overflow: hidden;
+  .card-img {
+    margin-bottom: 12px;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &:hover {
+    img {
+      opacity: 0.8;
+    }
+  }
+
+  &-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    color: $neutral-900;
+    margin-bottom: 4px;
+  }
+  &-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    color: $neutral-900;
+  }
+
+  &-lg {
+    .card-title {
+      font-size: 20px;
+      letter-spacing: 0.05em;
+    }
+  }
+  &-sm {
+    .card-img {
+      margin-bottom: 8px;
+    }
+    .card-title {
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include mobile() {
+  .card-sm {
+    &-sm {
+      .card-img {
+        margin-bottom: 8px;
+      }
+      .card-title {
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.card-best {
+  position: relative;
+
+  .card-img {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &:hover {
+    img {
+      opacity: 0.8;
+    }
+  }
+
+  .card-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &-text {
+      padding: 8px 12px;
+      background-color: $primary-100;
+      color: $primary-400;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+.card-category {
+  position: relative;
+  &-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(#000000, 0.4);
+    color: $neutral-white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      .card-category-title {
+        color: $primary-300;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  &-subtitle {
+    font-size: 24px;
+  }
+
+  &-title,
+  &-subtitle {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+
+    @include pad() {
+      font-size: 16px;
+    }
+  }
+}

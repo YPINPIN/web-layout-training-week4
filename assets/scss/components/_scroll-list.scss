@@ -1,0 +1,18 @@
+.scroll-list {
+  display: flex;
+  gap: 24px;
+
+  .scroll-item {
+    flex: 1;
+    max-width: 306px;
+  }
+
+  @include mobile() {
+    overflow-x: auto;
+    gap: 16px;
+
+    .scroll-item {
+      min-width: 300px;
+    }
+  }
+}

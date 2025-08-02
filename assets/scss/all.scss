@@ -13,10 +13,18 @@
 /* components */
 @import 'components/buttons';
 @import 'components/links';
+@import 'components/breadcrumb';
+@import 'components/cards';
+@import 'components/pagination';
+@import 'components/inputs';
+@import 'components/scroll-list';
+@import 'components/indicators';
 
 /* layout */
 @import 'layout/nav';
-@import 'layout/footer';
 
 /* pages */
 @import 'pages/index';
+@import 'pages/story';
+@import 'pages/products';
+@import 'pages/product';

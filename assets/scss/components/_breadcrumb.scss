@@ -1,0 +1,43 @@
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+
+  a {
+    color: $neutral-600;
+    &:hover {
+      color: $primary-400;
+    }
+
+    @include mobile() {
+      font-size: 14px;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &.active {
+    a {
+      color: $neutral-900;
+      pointer-events: none;
+    }
+  }
+
+  + .breadcrumb-item::before {
+    content: '/';
+    padding: 0 12px;
+    color: $neutral-300;
+    font-weight: 700;
+
+    @include mobile() {
+      padding: 0 8px;
+    }
+  }
+}

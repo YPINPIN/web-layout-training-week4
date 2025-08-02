@@ -1,0 +1,38 @@
+.story-header {
+  padding-top: 151px;
+  padding-bottom: 151px;
+  background-image: url('../images/story/hero.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include mobile() {
+    padding-top: 87px;
+    padding-bottom: 87px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url('../images/story/hero-sm.png');
+  }
+}
+
+// history
+.history {
+  &-list {
+    list-style-type: disc;
+    padding-left: 24px;
+  }
+  &-item {
+    time {
+      padding-right: 8px;
+    }
+    span {
+      padding-left: 8px;
+      border-left: 1px solid $neutral-900;
+    }
+  }
+}
+
+// concept
+.concept-item {
+  padding-left: 12px;
+  border-left: 3px solid $neutral-300;
+}

@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <title>鞋子電商 | 首頁</title>
   </head>
   <body>
-    <%- include('./layout/nav'); -%>
+    <%- include('./layout/nav') -%>
     <!-- nav-sm-list -->
     <ul class="nav-sm-list d-none d-sm-flex text-center">
       <li class="nav-sm-item flex-1">
@@ -18,11 +18,387 @@
       </li>
     </ul>
 
-    <div class="container">
-      <h1 class="index-title">我是首頁</h1>
-    </div>
+    <!-- header -->
+    <header class="index-header">
+      <picture>
+        <source
+          srcset="../assets/images/banner/banner-sm.png"
+          media="(max-width: 576px)"
+        />
+        <img src="../assets/images/banner/banner.png" alt="banner" />
+      </picture>
+      <div class="header-content">
+        <h2 class="display-1 display-sm-2 text-neutral-white mb-16 mb-sm-8">
+          URBNSTEP
+        </h2>
+        <h3 class="h3 h-sm-5 text-neutral-white mb-48 mb-sm-32">
+          Your Step, Your Statement
+        </h3>
+        <button type="button" class="btn btn-primary">立即選購</button>
+      </div>
+    </header>
 
-    <%- include('./layout/footer'); -%>
+    <!-- main -->
+    <main>
+      <!-- new arrival -->
+      <section class="py-64 py-sm-40">
+        <div class="container">
+          <h2 class="display-2 h-sm-2 text-center mb-12 mb-sm-8">
+            New Arrival
+          </h2>
+          <h3 class="h2 h-sm-4 text-center mb-32 mb-sm-24">新品上市</h3>
+          <ul class="row">
+            <li class="col-6 col-sm-2 mb-40 mb-sm-24">
+              <a href="./product.html" class="card card-lg card-sm-sm">
+                <div class="card-img">
+                  <img src="../assets/images/new/new-1.png" alt="new-1" />
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Monoverse</h4>
+                  <p class="card-text">NT$3,600</p>
+                </div>
+              </a>
+            </li>
+            <li class="col-6 col-sm-2 mb-40 mb-sm-24">
+              <a href="./product.html" class="card card-lg card-sm-sm">
+                <div class="card-img">
+                  <img src="../assets/images/new/new-2.png" alt="new-2" />
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">PLATFORM 404</h4>
+                  <p class="card-text">NT$2,600</p>
+                </div>
+              </a>
+            </li>
+            <li class="col-6 col-sm-2">
+              <a href="./product.html" class="card card-lg card-sm-sm">
+                <div class="card-img">
+                  <img src="../assets/images/new/new-3.png" alt="new-3" />
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">URBN Force</h4>
+                  <p class="card-text">NT$3,200</p>
+                </div>
+              </a>
+            </li>
+            <li class="col-6 col-sm-2">
+              <a href="./product.html" class="card card-lg card-sm-sm">
+                <div class="card-img">
+                  <img src="../assets/images/new/new-4.png" alt="new-4" />
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Mode90</h4>
+                  <p class="card-text">NT$4,000</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- best seller -->
+      <section class="py-64 py-sm-40 mb-48 mb-sm-24">
+        <div class="container">
+          <h2 class="h2 h-sm-4 py-6 mb-16">熱銷補貨</h2>
+          <ul class="scroll-list">
+            <li class="scroll-item">
+              <a href="./product.html" class="card-best">
+                <div class="card-img">
+                  <img
+                    src="../assets/images/products/product-3.png"
+                    alt="product-3"
+                  />
+                </div>
+                <div class="card-badge">
+                  <p class="card-badge-text">人氣 No.1</p>
+                </div>
+              </a>
+            </li>
+            <li class="scroll-item">
+              <a href="./product.html" class="card-best">
+                <div class="card-img">
+                  <img
+                    src="../assets/images/products/product.png"
+                    alt="product"
+                  />
+                </div>
+                <div class="card-badge">
+                  <p class="card-badge-text">人氣 No.1</p>
+                </div>
+              </a>
+            </li>
+            <li class="scroll-item">
+              <a href="./product.html" class="card-best">
+                <div class="card-img">
+                  <img
+                    src="../assets/images/products/product-6.png"
+                    alt="product-6"
+                  />
+                </div>
+                <div class="card-badge">
+                  <p class="card-badge-text">人氣 No.1</p>
+                </div>
+              </a>
+            </li>
+            <li class="scroll-item">
+              <a href="./product.html" class="card-best">
+                <div class="card-img">
+                  <img
+                    src="../assets/images/products/product-4.png"
+                    alt="product-4"
+                  />
+                </div>
+                <div class="card-badge">
+                  <p class="card-badge-text">人氣 No.1</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- sale banner -->
+      <section class="sale-section mb-48 mb-sm-24">
+        <picture>
+          <source
+            srcset="../assets/images/banner/banner-co-branded-sm.png"
+            media="(max-width: 576px)"
+          />
+          <img
+            class="sale-banner"
+            src="../assets/images/banner/banner-co-branded.png"
+            alt="banner"
+          />
+        </picture>
+        <div class="sale-body">
+          <div class="sale-content">
+            <h2
+              class="sale-title mb-16 d-flex justify-content-center align-items-center flex-wrap flex-sm-column"
+            >
+              <span
+                class="display-2 h-lg-2 text-neutral-white me-24 me-sm-0 mb-sm-8"
+              >
+                URBNSTEP
+              </span>
+              <span class="h1 h-lg-3 text-primary-300 me-24 me-sm-0 mb-sm-8"
+                >x</span
+              >
+              <span class="display-2 h-lg-2 text-neutral-white"
+                >Kevin Chen</span
+              >
+            </h2>
+            <h3
+              class="sale-subtitle h2 h-lg-5 text-neutral-white text-center mb-32 mb-lg-24"
+            >
+              跨界聯名，限量發售
+            </h3>
+            <div class="sale-text text-center mb-48 mb-lg-32">
+              <p class="fs-20 f-lg-16 text-neutral-500 d-sm-none">
+                新銳漫畫家 Kevin Chen 親自操刀設計，街頭能量全面引爆！
+              </p>
+              <p class="fs-16 text-neutral-500 mb-4 d-none d-sm-block">
+                新銳漫畫家 Kevin Chen 親自操刀設計
+              </p>
+              <p class="fs-16 text-neutral-500 d-none d-sm-block">
+                街頭能量全面引爆！
+              </p>
+            </div>
+            <div class="sale-action">
+              <button type="button" class="btn btn-primary mx-auto">
+                立即選購
+              </button>
+            </div>
+            <!-- star & sparkle -->
+            <img
+              class="sale-star"
+              src="../assets/images/banner/star.svg"
+              alt="star"
+            />
+            <img
+              class="sale-sparkle"
+              src="../assets/images/banner/sparkle.svg"
+              alt="star"
+            />
+          </div>
+        </div>
+        <!-- indicators -->
+        <div class="sale-indicators">
+          <ul class="indicators">
+            <li class="indicators-item active">
+              <button type="button" class="indicators-dot"></button>
+            </li>
+            <li class="indicators-item">
+              <button type="button" class="indicators-dot"></button>
+            </li>
+            <li class="indicators-item">
+              <button type="button" class="indicators-dot"></button>
+            </li>
+            <li class="indicators-item">
+              <button type="button" class="indicators-dot"></button>
+            </li>
+            <li class="indicators-item">
+              <button type="button" class="indicators-dot"></button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- sale category -->
+      <section class="py-64 py-sm-40">
+        <div class="container">
+          <h2 class="h2 h-sm-4 mb-16">依系列選購</h2>
+          <ul class="row">
+            <li class="col-3 col-sm-2 mb-sm-12">
+              <div class="card-category">
+                <img
+                  src="../assets/images/products/product-6.png"
+                  alt="category image 1"
+                />
+                <a href="./products.html" class="card-category-body">
+                  <h3 class="card-category-title">URBN RUNNER</h3>
+                  <h4 class="card-category-subtitle">慢跑系列</h4>
+                </a>
+              </div>
+            </li>
+            <li class="col-3 col-sm-2 mb-sm-12">
+              <div class="card-category">
+                <img
+                  src="../assets/images/products/product-11.png"
+                  alt="category image 2"
+                />
+                <a href="./products.html" class="card-category-body">
+                  <h3 class="card-category-title">STREETMODE</h3>
+                  <h4 class="card-category-subtitle">滑板系列</h4>
+                </a>
+              </div>
+            </li>
+            <li class="col-3 col-sm-2">
+              <div class="card-category">
+                <img
+                  src="../assets/images/products/product-9.png"
+                  alt="category image 3"
+                />
+                <a href="./products.html" class="card-category-body">
+                  <h3 class="card-category-title">CHUNK DISTRICT</h3>
+                  <h4 class="card-category-subtitle">厚底系列</h4>
+                </a>
+              </div>
+            </li>
+            <li class="col-3 col-sm-2">
+              <div class="card-category">
+                <img
+                  src="../assets/images/products/product-10.png"
+                  alt="category image 4"
+                />
+                <a href="./products.html" class="card-category-body">
+                  <h3 class="card-category-title">COLLAB ZONE</h3>
+                  <h4 class="card-category-subtitle">聯名企劃</h4>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- style gallery -->
+      <section class="py-64 py-sm-40 mb-48 mb-sm-24">
+        <div class="container">
+          <h2 class="h2 h-sm-4 mb-16 py-sm-6">穿搭靈感</h2>
+          <div class="d-flex g-8 g-sm-16 overflow-x-sm-auto">
+            <div class="flex-1 d-flex flex-column g-8 d-sm-contents">
+              <div class="d-flex g-8 d-sm-contents">
+                <div class="gallery-item flex-1">
+                  <img
+                    src="../assets/images/inspiration/inspiration-1.png"
+                    alt="inspiration-1"
+                  />
+                </div>
+                <div class="gallery-item flex-1">
+                  <img
+                    src="../assets/images/inspiration/inspiration-2.png"
+                    alt="inspiration-2"
+                  />
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="../assets/images/inspiration/inspiration-3.png"
+                  alt="inspiration-3"
+                />
+              </div>
+            </div>
+            <div class="flex-1 d-flex flex-column g-8 d-sm-contents">
+              <div class="d-flex g-8 d-sm-contents">
+                <div class="gallery-item flex-1">
+                  <img
+                    src="../assets/images/inspiration/inspiration-4.png"
+                    alt="inspiration-4"
+                  />
+                </div>
+                <div class="gallery-item flex-1">
+                  <img
+                    src="../assets/images/inspiration/inspiration-5.png"
+                    alt="inspiration-5"
+                  />
+                </div>
+              </div>
+              <div class="d-flex g-8 d-sm-contents">
+                <div class="gallery-item flex-1">
+                  <img
+                    src="../assets/images/inspiration/inspiration-6.png"
+                    alt="inspiration-6"
+                  />
+                </div>
+                <div class="gallery-item flex-1">
+                  <img
+                    src="../assets/images/inspiration/inspiration-7.png"
+                    alt="inspiration-7"
+                  />
+                </div>
+              </div>
+              <div class="d-flex g-8 d-sm-contents">
+                <div class="gallery-item flex-1">
+                  <img
+                    src="../assets/images/inspiration/inspiration-8.png"
+                    alt="inspiration-8"
+                  />
+                </div>
+                <div class="gallery-item flex-1">
+                  <img
+                    src="../assets/images/inspiration/inspiration-9.png"
+                    alt="inspiration-9"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 d-flex flex-column g-8 d-sm-contents">
+              <div class="gallery-item">
+                <img
+                  src="../assets/images/inspiration/inspiration-10.png"
+                  alt="inspiration-10"
+                />
+              </div>
+              <div class="d-flex g-8 d-sm-contents">
+                <div class="gallery-item flex-1">
+                  <img
+                    src="../assets/images/inspiration/inspiration-11.png"
+                    alt="inspiration-11"
+                  />
+                </div>
+                <div class="gallery-item flex-1">
+                  <img
+                    src="../assets/images/inspiration/inspiration-12.png"
+                    alt="inspiration-12"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <%- include('./layout/banner') -%> <%- include('./layout/footer') -%>
 
     <script type="module" src="../main.js"></script>
   </body>
