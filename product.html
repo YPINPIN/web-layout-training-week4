@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>鞋子電商 | 產品詳情</title>
-    <script type="module" crossorigin src="/web-layout-training-week4/assets/main-Ds8GPQiK.js"></script>
-    <link rel="stylesheet" crossorigin href="/web-layout-training-week4/assets/main-CwA6nMtt.css">
+    <script type="module" crossorigin src="/web-layout-training-week4/assets/main-b-Bmgkz_.js"></script>
+    <link rel="stylesheet" crossorigin href="/web-layout-training-week4/assets/main-DSEmuQDY.css">
   </head>
   <body>
     <!-- nav -->
@@ -209,7 +209,7 @@
               <div class="d-flex g-8">
                 <button
                   type="button"
-                  class="btn-heart flex-1 btn btn-outline-neutral btn-toggle"
+                  class="btn-favorite flex-1 btn btn-outline-neutral btn-toggle"
                 >
                   <i class="bi bi-heart btn-default-icon"></i>
                   <i class="bi bi-heart-fill btn-active-icon"></i>
@@ -380,14 +380,25 @@
     </div>
   </div>
 </footer>
-
+
     <script>
-      const toggleBtns = document.querySelectorAll('.btn-toggle');
-      toggleBtns.forEach((toggleBtn) => {
-        toggleBtn.addEventListener('click', () => {
-          toggleBtn.classList.toggle('active');
-        });
+      const favoriteBtn = document.querySelector('.btn-favorite.btn-toggle');
+      favoriteBtn.addEventListener('click', () => {
+        const isFavorite = favoriteBtn.classList.toggle('active');
+        // 將資料存到sessionStorage
+        sessionStorage.setItem('isFavorite', isFavorite);
+        // 如果為收藏狀態，則跳轉到收藏頁面
+        if (isFavorite) {
+          location.href = './favorites.html';
+        }
       });
+
+      // 檢查是否已收藏
+      const isFavorite = sessionStorage.getItem('isFavorite') === 'true';
+      if (isFavorite) {
+        // 如果已收藏，則切換為收藏狀態
+        favoriteBtn.classList.toggle('active', true);
+      }
     </script>
   </body>
 </html>
