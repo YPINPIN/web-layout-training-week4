@@ -34,4 +34,5 @@ img {
 [class*=' bi-']::before,
 [class^='bi-']::before {
   display: block;
+  letter-spacing: 0px;
 }

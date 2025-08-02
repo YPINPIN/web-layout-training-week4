@@ -34,7 +34,7 @@
 }
 
 @include mobile() {
-  .btn-heart.btn-toggle {
+  .btn-favorite.btn-toggle {
     padding: 12px;
     .bi::before {
       font-size: 24px;

@@ -5,6 +5,9 @@
 .text-primary-400 {
   color: $primary-400;
 }
+.text-primary-500 {
+  color: $primary-500;
+}
 
 .text-neutral-white {
   color: $neutral-white;
@@ -23,6 +26,9 @@
 /* text align */
 .text-center {
   text-align: center;
+}
+.text-right {
+  text-align: right;
 }
 
 @include mobile() {
@@ -47,9 +53,30 @@
   letter-spacing: 0.05em;
 }
 
+.fs-24 {
+  font-size: 24px;
+  letter-spacing: 0.05em;
+}
+
 @include desktop() {
-  .f-lg-16 {
+  .fs-lg-16 {
     font-size: 16px;
     letter-spacing: 0.05em;
   }
+}
+
+@include mobile() {
+  .fs-sm-14 {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+  .fs-sm-20 {
+    font-size: 20px;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* font weight */
+.fw-500 {
+  font-weight: 500;
 }
