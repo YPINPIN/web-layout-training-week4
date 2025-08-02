@@ -1,0 +1,117 @@
+$btn-primary-shadow: 0px 0px 0px 3px rgba($primary-300, 0.4);
+$btn-neutral-shadow: 0px 0px 0px 3px rgba($neutral-900, 0.1);
+
+.btn {
+  padding: 12px 24px;
+  color: $neutral-900;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-small {
+    padding: 8px 16px;
+  }
+
+  .bi::before {
+    font-size: 20px;
+    margin-right: 8px;
+  }
+
+  .btn-active-icon,
+  .btn-active-text {
+    display: none;
+  }
+
+  &.active {
+    .btn-default-icon,
+    .btn-default-text {
+      display: none;
+    }
+    .btn-active-icon,
+    .btn-active-text {
+      display: block;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+
+  &-primary {
+    background-color: $primary-300;
+
+    &:hover:not([disabled]) {
+      color: $primary-500;
+    }
+    &:focus:not([disabled], .btn-toggle) {
+      color: $primary-500;
+      box-shadow: $btn-primary-shadow;
+    }
+  }
+
+  &-neutral {
+    color: $neutral-white;
+    background-color: $neutral-900;
+
+    &:hover:not([disabled]) {
+      background-color: $neutral-700;
+    }
+    &:focus:not([disabled], .btn-toggle) {
+      background-color: $neutral-700;
+      box-shadow: $btn-neutral-shadow;
+    }
+  }
+
+  &-outline-neutral {
+    color: $neutral-900;
+    background-color: transparent;
+    border: 1px solid $neutral-900;
+
+    &:hover:not([disabled]) {
+      color: $neutral-white;
+      background-color: $neutral-900;
+    }
+    &:focus:not([disabled], .btn-toggle) {
+      color: $neutral-white;
+      background-color: $neutral-900;
+      box-shadow: $btn-neutral-shadow;
+    }
+  }
+}
+
+@include mobile() {
+  .btn-sm-small {
+    padding: 8px 16px;
+  }
+}
+
+.btn-icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 24px;
+
+  &-sm {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  &:hover:not([disabled]) {
+    color: $primary-400;
+  }
+  &:focus:not([disabled]) {
+    color: $neutral-900;
+    background-color: $primary-100;
+  }
+}

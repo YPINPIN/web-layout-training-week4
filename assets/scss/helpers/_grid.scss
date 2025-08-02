@@ -1,0 +1,52 @@
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.container-fluid {
+  max-width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+
+  @include mobile() {
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: calc(100% / 12 * #{$i});
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@include pad() {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: calc(100% / 12 * #{$i});
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+}
+
+@include mobile() {
+  @for $i from 1 through 4 {
+    .col-sm-#{$i} {
+      width: calc(100% / 4 * #{$i});
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
+}

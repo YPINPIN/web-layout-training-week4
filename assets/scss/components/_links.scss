@@ -1,0 +1,35 @@
+.link {
+  display: inline-block;
+  .bi::before {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    margin-right: 8px;
+  }
+}
+
+.link-primary {
+  color: $primary-400;
+  span {
+    display: inline-block;
+    padding-bottom: 4px;
+    border-bottom: 1px solid $primary-400;
+  }
+
+  &:hover {
+    color: $primary-500;
+    span {
+      border-bottom-color: $primary-500;
+    }
+  }
+}
+
+.link-neutral {
+  color: $neutral-900;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  &:hover {
+    color: $neutral-600;
+  }
+}

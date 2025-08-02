@@ -1,0 +1,16 @@
+.nav-logo {
+  background-image: url(../images/logo.svg);
+  width: 129px;
+  height: 46px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nav-sm-link {
+  background-color: $primary-100;
+
+  &:hover {
+    background-color: $primary-200;
+  }
+}
