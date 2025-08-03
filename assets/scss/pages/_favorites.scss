@@ -8,5 +8,10 @@
         object-fit: cover;
       }
     }
+    &-link:hover {
+      img {
+        opacity: 0.8;
+      }
+    }
   }
 }
