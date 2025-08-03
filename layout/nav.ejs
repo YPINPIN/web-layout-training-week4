@@ -19,9 +19,16 @@
       </ul>
     </div>
     <div class="nav-right">
-      <button type="button" class="btn-icon">
+      <button type="button" class="btn-login btn-icon">
         <i class="bi bi-person"></i>
       </button>
     </div>
   </div>
 </nav>
+
+<script>
+  const loginBtn = document.querySelector('.btn-login');
+  loginBtn.addEventListener('click', () => {
+    location.href = './login.html';
+  });
+</script>

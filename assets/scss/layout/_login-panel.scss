@@ -1,0 +1,77 @@
+.login {
+  &-img {
+    img {
+      width: 100%;
+      max-height: 589px;
+      object-fit: cover;
+    }
+  }
+  &-img-sm {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-section {
+    height: 100%;
+    padding: 32px 80px;
+    background-image: url('../images/login/login-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include pad() {
+      padding: 32px;
+    }
+
+    @include mobile() {
+      padding: 32px 0;
+      background-image: none;
+      border-radius: 0;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &-btn {
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+    background-color: $neutral-white;
+    border: 1px solid $neutral-300;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: $primary-100;
+    }
+    &:focus {
+      background-color: $primary-100;
+      border-color: $primary-300;
+    }
+
+    img {
+      margin-right: 12px;
+    }
+
+    span {
+      color: $neutral-900;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.05em;
+    }
+  }
+}

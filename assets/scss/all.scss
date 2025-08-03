@@ -19,9 +19,11 @@
 @import 'components/inputs';
 @import 'components/scroll-list';
 @import 'components/indicators';
+@import 'components/tab';
 
 /* layout */
 @import 'layout/nav';
+@import 'layout/login-panel';
 
 /* pages */
 @import 'pages/index';

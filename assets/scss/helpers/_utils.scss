@@ -442,6 +442,10 @@
 }
 
 /* overflow */
+.overflow-hidden {
+  overflow: hidden;
+}
+
 @include mobile() {
   .overflow-x-sm-auto {
     overflow-x: auto;

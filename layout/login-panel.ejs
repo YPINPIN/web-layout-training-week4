@@ -1,0 +1,64 @@
+<main class="py-64 py-sm-0">
+  <div class="login-img-sm d-none d-sm-block">
+    <img src="../assets/images/login/login-sm.png" alt="login image sm" />
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-5 col-md-6 d-sm-none">
+        <div class="login-img radius-12 overflow-hidden">
+          <img src="../assets/images/login/login.png" alt="login image" />
+        </div>
+      </div>
+      <div class="col-7 col-md-6 col-sm-4">
+        <section class="login-section">
+          <h2 class="h3 h-sm-4 text-center mb-32 mb-sm-24">歡迎！</h2>
+          <ul class="tab-list mb-32 mb-sm-24">
+            <li class="tab-item <% if (type === 'login') { %> active <% } %>">
+              <a href="./login.html" class="tab-link">登入</a>
+            </li>
+            <li
+              class="tab-item <% if (type === 'register') { %> active <% } %>"
+            >
+              <a href="./register.html" class="tab-link">註冊</a>
+            </li>
+          </ul>
+          <ul class="login-list">
+            <li class="login-item">
+              <button type="button" class="login-btn">
+                <img
+                  src="../assets/images/login/facebook.svg"
+                  alt="facebook logo"
+                />
+                <span
+                  >Facebook <% if (type === 'login') { %> 登入 <% } else { %>
+                  註冊 <% } %></span
+                >
+              </button>
+            </li>
+            <li>
+              <button type="button" class="login-btn">
+                <img src="../assets/images/login/apple.svg" alt="apple logo" />
+                <span
+                  >Apple <% if (type === 'login') { %> 登入 <% } else { %> 註冊
+                  <% } %></span
+                >
+              </button>
+            </li>
+            <li>
+              <button type="button" class="login-btn">
+                <img
+                  src="../assets/images/login/google.svg"
+                  alt="google logo"
+                />
+                <span
+                  >Google <% if (type === 'login') { %> 登入 <% } else { %> 註冊
+                  <% } %></span
+                >
+              </button>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
