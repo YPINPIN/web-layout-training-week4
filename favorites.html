@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>鞋子電商 | 我的收藏</title>
-    <script type="module" crossorigin src="/web-layout-training-week4/assets/main-b-Bmgkz_.js"></script>
-    <link rel="stylesheet" crossorigin href="/web-layout-training-week4/assets/main-DSEmuQDY.css">
+    <script type="module" crossorigin src="/web-layout-training-week4/assets/main-DnYiz7nQ.js"></script>
+    <link rel="stylesheet" crossorigin href="/web-layout-training-week4/assets/main-Bz_rUSmJ.css">
   </head>
   <body>
     <!-- nav -->
@@ -30,12 +30,19 @@
       </ul>
     </div>
     <div class="nav-right">
-      <button type="button" class="btn-icon">
+      <button type="button" class="btn-login btn-icon">
         <i class="bi bi-person"></i>
       </button>
     </div>
   </div>
 </nav>
+
+<script>
+  const loginBtn = document.querySelector('.btn-login');
+  loginBtn.addEventListener('click', () => {
+    location.href = './login.html';
+  });
+</script>
 
     <!-- main -->
     <main class="py-64 py-sm-24">
